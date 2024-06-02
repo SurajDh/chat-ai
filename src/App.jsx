@@ -72,7 +72,8 @@ function App() {
         </form>
         <div className="w-full md:w-2/3 m-auto text-center rounded bg-gray-50 my-1">
           <ReactMarkdown className="p-3">{answer}</ReactMarkdown>
-        
+        /// ADDED A COPY BUTTON FOR EASE SO THAT VISITORS CAN COPY LONG OUTPUT RESULTS LIKE PARAGRAPHS OR ESSAYS WITH JUST ONE CLICK ///
+        /// ADDED BY SURAJ DHOUNDIYAL///
         <button type="button"  className="bg-blue-300 p-2 rounded-md hover:bg-blue-400 transition-all duration-300" onClick={handleCopyClick}>Copy Result</button>
         </div>
 
