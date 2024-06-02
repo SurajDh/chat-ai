@@ -2,7 +2,7 @@
 
 AI Chat App using Generative Language Client API
 
-[chat-ai](suraj-chat-ai.netlify.app)
+[chat-ai](https://suraj-chat-ai.netlify.app/)
 
 ## Setup Procedure
 
