@@ -4,9 +4,19 @@ import axios from "axios";
 import ReactMarkdown from "react-markdown";
 
 function App() {
+
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
   const [generatingAnswer, setGeneratingAnswer] = useState(false);
+  
+  
+  /// ADDED A COPY BUTTON FOR EASE SO THAT VISITORS CAN COPY LONG OUTPUT RESULTS LIKE PARAGRAPHS OR ESSAYS WITH JUST ONE CLICK ///
+  /// ADDED BY SURAJ DHOUNDIYAL///
+  const handleCopyClick=()=>{
+    navigator.clipboard.writeText(answer);
+    alert("Copied to clipboard");
+}
+
 
   async function generateAnswer(e) {
     setGeneratingAnswer(true);
@@ -33,6 +43,7 @@ function App() {
 
     setGeneratingAnswer(false);
   }
+
 
   return (
     <>
@@ -61,7 +72,11 @@ function App() {
         </form>
         <div className="w-full md:w-2/3 m-auto text-center rounded bg-gray-50 my-1">
           <ReactMarkdown className="p-3">{answer}</ReactMarkdown>
+        
+        <button type="button"  className="bg-blue-300 p-2 rounded-md hover:bg-blue-400 transition-all duration-300" onClick={handleCopyClick}>Copy Result</button>
         </div>
+
+
       </div>
     </>
   );
